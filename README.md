@@ -1,4 +1,4 @@
-# 🚀 Selenium TestNG Automation Practice – DailyFinance (Gradle Project)
+# 🚀 Selenium TestNG Automation Practice – DailyFinance
 
 Welcome to my automation testing practice repository!  
 This project documents my learning journey in **Selenium WebDriver automation** using the **TestNG framework**, managed with **Gradle**.  
