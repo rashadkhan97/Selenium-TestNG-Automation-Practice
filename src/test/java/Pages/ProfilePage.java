@@ -1,3 +1,6 @@
+package Pages;
+
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,7 +11,7 @@ import java.util.List;
 public class ProfilePage {
     // View Button
     @FindBy(css = "[type = button]")
-    List<WebElement> btnView;
+    public List<WebElement> btnView;
 
     // #### For Editing User Details ####
     // First Name
@@ -30,12 +33,21 @@ public class ProfilePage {
         PageFactory.initElements(driver, this);
     }
 
-// This method is just used to update the details but its pre-requisite file -- ProfileTestRunner.java
+// This method is just used to update the details but its pre-requisite file -- testrunner.ProfileTestRunner.java
     public void updateProfile(String firstName, String lastName, String email){
         // Update details firstName, lastName and email
         btnView.get(1).click(); // click on edit button inside user profile
+
+        // first clear previous firstName then provide new firstName
+        txtFirstName.sendKeys(Keys.CONTROL, "a", Keys.BACK_SPACE);
         txtFirstName.sendKeys(firstName); // first name update
+
+        // first clear previous LastName then provide new Name
+        txtLastName.sendKeys(Keys.CONTROL, "a", Keys.BACK_SPACE);
         txtLastName.sendKeys(lastName); // last name update
+
+        // first clear previous email then provide new Email
+        txtEmail.sendKeys(Keys.CONTROL, "a", Keys.BACK_SPACE);
         txtEmail.sendKeys(email); // email update
         btnView.get(2).click(); // click on update button inside user profile
 
