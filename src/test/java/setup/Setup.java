@@ -25,7 +25,6 @@ public class Setup {
     public void quitBrowser(){
 
     //Task - Logout from profile Menu
-
         //1. Click on profile Menu
         ProfilePage profilePage = new ProfilePage(driver);
         profilePage.btnView.get(0).click();
@@ -33,7 +32,7 @@ public class Setup {
         // 2. Click on Logout page
         LoginPage loginPage = new LoginPage(driver);
         loginPage.menuItem.get(1).click();
-        //driver.quit();
+        driver.quit();
     }
 
 }

@@ -16,6 +16,9 @@ dependencies {
     implementation("org.seleniumhq.selenium:selenium-java:4.34.0")
 }
 
-//test {
-//    useJUnitPlatform()
-//}
+test {
+    // suite path location declaring
+    useTestNG(){
+        suites "./src/test/resources/suite.xml"
+    }
+}

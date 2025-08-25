@@ -34,7 +34,7 @@ public class ProfilePage {
     }
 
 // This method is just used to update the details but its pre-requisite file -- testrunner.ProfileTestRunner.java
-    public void updateProfile(String firstName, String lastName, String email){
+    public void updateProfile(String firstName, String lastName){
         // Update details firstName, lastName and email
         btnView.get(1).click(); // click on edit button inside user profile
 
@@ -45,10 +45,10 @@ public class ProfilePage {
         // first clear previous LastName then provide new Name
         txtLastName.sendKeys(Keys.CONTROL, "a", Keys.BACK_SPACE);
         txtLastName.sendKeys(lastName); // last name update
-
-        // first clear previous email then provide new Email
-        txtEmail.sendKeys(Keys.CONTROL, "a", Keys.BACK_SPACE);
-        txtEmail.sendKeys(email); // email update
+//
+//        // first clear previous email then provide new Email
+//        txtEmail.sendKeys(Keys.CONTROL, "a", Keys.BACK_SPACE);
+//        txtEmail.sendKeys(email); // email update
         btnView.get(2).click(); // click on update button inside user profile
 
     }

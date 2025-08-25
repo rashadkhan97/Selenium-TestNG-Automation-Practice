@@ -34,7 +34,7 @@ public class ProfileTestRunner extends Setup {
 
         profilePage.btnView.get(1).click(); // click on edit
         // update user information provide
-        profilePage.updateProfile("MdRashadul", "Islam", "rsrasddrashad@gmail.com");
+        profilePage.updateProfile("Md Rashadul", "Islam");
         profilePage.btnView.get(2).click();
         Utils.handleAlerts(driver);
     }
