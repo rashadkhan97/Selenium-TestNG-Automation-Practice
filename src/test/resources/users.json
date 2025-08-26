@@ -1,0 +1,29 @@
+[
+  {
+    "firstName": "Demetrius",
+    "lastName": "Mann",
+    "password": "2mceh3x24d",
+    "phoneNUmber": "01975119625",
+    "email": "demetrius@gmail.com"
+  },
+  {
+    "firstName": "Lincoln",
+    "lastName": "Windler",
+    "password": "zti7wyi0yde",
+    "phoneNUmber": "01990203197",
+    "email": "lincoln@gmail.com"
+  },
+  {
+    "firstName": "Tonia",
+    "lastName": "Harber",
+    "password": "ud8b2v23l02",
+    "phoneNUmber": "01980908724",
+    "email": "tonia@gmail.com"
+  },
+  {
+    "firstName": "Johnie",
+    "lastName": "Lueilwitz",
+    "password": "4rs0gra3",
+    "email": "johnie@gmail.com"
+  }
+]

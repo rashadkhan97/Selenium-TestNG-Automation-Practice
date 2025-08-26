@@ -21,7 +21,7 @@ public class Setup {
         driver.get("https://dailyfinance.roadtocareer.net/");
     }
 
-    @AfterTest
+   // @AfterTest
     public void quitBrowser(){
 
     //Task - Logout from profile Menu
