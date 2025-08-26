@@ -50,6 +50,6 @@ public class ProfilePage {
 //        txtEmail.sendKeys(Keys.CONTROL, "a", Keys.BACK_SPACE);
 //        txtEmail.sendKeys(email); // email update
         btnView.get(2).click(); // click on update button inside user profile
-
     }
+
 }
