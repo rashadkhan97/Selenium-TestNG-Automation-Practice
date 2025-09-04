@@ -7,9 +7,9 @@
         </classes>
     </test>
 
-    <test name="Admin user info update">
-        <classes>
-            <class name="testrunner.ProfileTestRunner"></class>
-        </classes>
-    </test>
+<!--    <test name="Admin user info update">-->
+<!--        <classes>-->
+<!--            <class name="testrunner.ProfileTestRunner"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>

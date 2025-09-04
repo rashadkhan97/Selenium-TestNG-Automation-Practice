@@ -19,7 +19,7 @@ public class LoginTestRunner extends Setup {
     @Test(priority = 1, description = "Admin login with wrong credentials")
     public void doLoginWithWrongCreds(){
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.doLogin("admin@test.com", "134");
+        loginPage.doLogin(System.getProperty("email"),System.getProperty("password")); //system.getProperty of email and password will be given through CMD/CLI for secure login
         String validationErrorActual = driver.findElement(By.tagName("p")).getText();
         String validationErrorExpected = "Invalid email or password";
 

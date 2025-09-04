@@ -18,11 +18,26 @@ dependencies {
     implementation("com.github.javafaker:javafaker:1.0.2")
     // https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
     implementation("com.googlecode.json-simple:json-simple:1.1.1")
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-csv
+    implementation("org.apache.commons:commons-csv:1.14.1")
 }
 
 test {
     // suite path location declaring
     useTestNG(){
+    // using project.hasProperty() for secure login with terminal/command line
+    // hasProperty will check if user set email and password data in -- System Properties
+        if(project.hasProperty("email") && project.hasProperty("password")){
+    // here inside -- email is the key and project.property("email") -- value (Non static it will given in CMD)
+            systemProperties.put("email", project.property("email"))
+    // here inside -- password is the key and project.property("password") -- value (Non static it will given in CMD)
+            systemProperties.put("password", project.property("password"))
+
+    // println used just to check then given email and password is taking or not it will show as output
+            println(project.property("email"))
+            println(project.property("password"))
+        }
+
         suites "./src/test/resources/suite.xml"
     }
 }

@@ -44,7 +44,6 @@ public class Utils {
         // Cast the parsed object into a JSONArray because our file stores multiple user objects
         JSONArray jsonArray = (JSONArray) jsonParser.parse(new FileReader(filePath));
 
-
         // Add the newly created user object into the existing JSON array
         jsonArray.add(jsonObject);
 
