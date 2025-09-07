@@ -3,6 +3,7 @@ package setup;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
+import org.testng.annotations.DataProvider;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -12,7 +13,7 @@ import java.util.List;
 
 public class LoginDataset {
 
-
+    @DataProvider(name = "LoginCSVData")
 //  Reads login test data (email & password) from a CSV file and returns it as a 2D Object array.
     public Object[][] getCSVData() throws IOException {
         String filePath = "./src/test/resources/users.csv";

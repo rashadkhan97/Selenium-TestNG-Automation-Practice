@@ -21,9 +21,8 @@ public class Setup {
         driver.get("https://dailyfinance.roadtocareer.net/");
     }
 
-   // @AfterTest
+    @AfterTest
     public void quitBrowser(){
-
         driver.quit();
     }
 
