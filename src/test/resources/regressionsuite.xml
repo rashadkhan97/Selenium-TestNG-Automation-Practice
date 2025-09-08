@@ -13,7 +13,7 @@
         </classes>
     </test>
 
-    <test name="Admin user info update">
+    <test name="User Registration">
         <classes>
             <class name="testrunner.RegistrationTestRunner"></class>
         </classes>

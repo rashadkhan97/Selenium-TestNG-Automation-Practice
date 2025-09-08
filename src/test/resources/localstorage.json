@@ -1,4 +1,1 @@
-{
-  "authToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluX2lkIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzU3MjU4MDUwLCJleHAiOjE3NTk4NTAwNTB9.-w8zeXuWk6qbmapXw1raW-HZiCq4G11eBW2whaCmnjA",
-  "authTokenData": "{\"_id\":\"admin_id\",\"email\":\"admin@test.com\",\"role\":\"admin\",\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluX2lkIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzU3MjU4MDUwLCJleHAiOjE3NTk4NTAwNTB9.-w8zeXuWk6qbmapXw1raW-HZiCq4G11eBW2whaCmnjA\"}"
-}
+{"authToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluX2lkIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzU3MzA5NzUxLCJleHAiOjE3NTk5MDE3NTF9.yZksVRdOaR7m5BKFBt8brUgukynFjNApFUf6LD9WjQE","authTokenData":"{\"_id\":\"admin_id\",\"email\":\"admin@test.com\",\"role\":\"admin\",\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluX2lkIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzU3MzA5NzUxLCJleHAiOjE3NTk5MDE3NTF9.yZksVRdOaR7m5BKFBt8brUgukynFjNApFUf6LD9WjQE\"}"}

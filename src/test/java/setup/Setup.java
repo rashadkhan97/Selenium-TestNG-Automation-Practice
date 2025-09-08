@@ -12,7 +12,7 @@ import java.time.Duration;
 public class Setup {
     public WebDriver driver;
 
-    @BeforeTest
+    @BeforeTest (groups = "smoke")
     public void Setup() {
         driver = new ChromeDriver();
         driver.manage().window().maximize(); //window maximize
@@ -21,7 +21,7 @@ public class Setup {
         driver.get("https://dailyfinance.roadtocareer.net/");
     }
 
-    @AfterTest
+    @AfterTest (groups = "smoke")
     public void quitBrowser(){
         driver.quit();
     }

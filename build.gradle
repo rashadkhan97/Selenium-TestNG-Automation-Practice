@@ -20,6 +20,8 @@ dependencies {
     implementation("com.googlecode.json-simple:json-simple:1.1.1")
     // https://mvnrepository.com/artifact/org.apache.commons/commons-csv
     implementation("org.apache.commons:commons-csv:1.14.1")
+    // https://mvnrepository.com/artifact/io.qameta.allure/allure-testng
+    implementation("io.qameta.allure:allure-testng:2.29.1")
 }
 
 test {
@@ -38,6 +40,13 @@ test {
             println(project.property("password"))
         }
 
-        suites "./src/test/resources/suite.xml"
+    // this will be use for suite run
+        // if we want to run regression suite -- gradle clean test -Psuite="regressionsuite.xml"
+        // if we want to run smoke suite -- gradle clean test -Psuite="smokesuite.xml"
+        if(project.hasProperty("suite")){
+            systemProperties.put("suite", project.property("suite"))
+            println(project.property("suite"))
+        }
+        suites "./src/test/resources/"+systemProperties.get("suite")
     }
 }

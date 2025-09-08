@@ -20,7 +20,16 @@ public class LoginTestRunner extends Setup {
     @Test(priority = 1, description = "Admin login with wrong credentials")
     public void doLoginWithWrongCreds(){
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.doLogin(System.getProperty("email"),System.getProperty("password")); //system.getProperty of email and password will be given through CMD/CLI for secure login
+
+    //system.getProperty of email and password will be given through CMD/CLI for secure login
+    //if we want give manually then we can write --> gradle clean test -Pemail="email address" -Ppassword="given pass"
+    // but if we don't give it just run gradle clean test then it will take automatic email and pass given as below
+        if(System.getProperty("email")!=null && System.getProperty("password")!=null){
+            loginPage.doLogin(System.getProperty("email"),System.getProperty("password"));
+        }
+        else{
+            loginPage.doLogin("admin@test.com","123456");
+        }
         String validationErrorActual = driver.findElement(By.tagName("p")).getText();
         String validationErrorExpected = "Invalid email or password";
 
@@ -30,7 +39,7 @@ public class LoginTestRunner extends Setup {
     }
 
     // Login with a last newly register user email and password. Which is in user.json file and this process done in Registration
-    @Test(priority = 2, description = "User can login with valid credentials")
+    @Test(priority = 2, description = "User can login with valid credentials", groups = "smoke")
     public void doLoginByUser() throws IOException, ParseException {
         LoginPage loginPage = new LoginPage(driver);
         // since user email and pass will be from user.json
@@ -47,7 +56,7 @@ public class LoginTestRunner extends Setup {
 
     }
 
-    @Test(priority = 3 , description = "Admin login with valid credentials")
+    @Test(priority = 3 , description = "Admin login with valid credentials", groups = "smoke")
     public void doLogin() throws IOException {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.doLogin("admin@test.com","admin123");
