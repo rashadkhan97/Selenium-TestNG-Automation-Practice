@@ -5,7 +5,7 @@ This project documents my learning journey in **Selenium WebDriver automation** 
 The testing is done on the web application  
 🔗 [https://dailyfinance.roadtocareer.net](https://dailyfinance.roadtocareer.net)
 
-This repository is part of my training at **Road to SDET**. I regularly update it as I explore different website features like login, dashboard, and user management.
+This repository is part of my training at **Road to SDET**. I regularly update it as I explore various website features, including login, dashboard, user management, and registration.
 
 ---
 
@@ -17,6 +17,8 @@ This project helps me develop strong hands-on skills in:
 - ✅ Structuring test cases with TestNG
 - ✅ Managing dependencies and builds using Gradle
 - ✅ Following best practices like Page Object Model (POM)
+- ✅ Optimizing code for better use
+ 
 
 ---
 
@@ -26,10 +28,12 @@ Using the [DailyFinance](https://dailyfinance.roadtocareer.net) website, I autom
 
 - 🔐 Login functionality
 - 📊 Dashboard visibility and elements
-- 👤 User Details/Profile
+- 👤 User Details/Profile and Registration
 - 🧭 Navigation between pages
 - 🚫 Error message validation
 - 📸 Screenshot capture on test failure
+- 📂 Saving user registration in JSON
+- 🗂️ Login with CSV Data
 
 ---
 
@@ -52,16 +56,6 @@ Using the [DailyFinance](https://dailyfinance.roadtocareer.net) website, I autom
 - [x] TestNG assertions and annotations
 - [x] Basic test reporting via TestNG
 - [x] Screenshot on failure
-
----
-
-## 🚀 Upcoming Features
-
-- [ ] Automate more pages (e.g., user management, logout)
-- [ ] Implement data-driven testing (Excel/CSV)
-- [ ] Custom reporting with ExtentReports
-- [ ] Add logging using Log4j
-- [ ] Set up CI pipeline (GitHub Actions or Jenkins)
 
 ---
 
