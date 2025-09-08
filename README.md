@@ -27,13 +27,14 @@ This project helps me develop strong hands-on skills in:
 Using the [DailyFinance](https://dailyfinance.roadtocareer.net) website, I automate and validate:
 
 - 🔐 Login functionality
+- 🔑 Save token from local storage on first login & reuse it
 - 📊 Dashboard visibility and elements
 - 👤 User Details/Profile and Registration
 - 📝 Update User Profile
 - 🧭 Navigation between pages
 - 🚫 Error message validation
 - 📸 Screenshot capture on test failure
-- 📂 Saving user registration in JSON
+- 📂 Saving Registered user's info in JSON
 - 🗂️ Login with CSV Data
 
 ---
