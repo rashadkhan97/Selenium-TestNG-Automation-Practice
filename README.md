@@ -29,6 +29,7 @@ Using the [DailyFinance](https://dailyfinance.roadtocareer.net) website, I autom
 - 🔐 Login functionality
 - 📊 Dashboard visibility and elements
 - 👤 User Details/Profile and Registration
+- 📝 Update User Profile
 - 🧭 Navigation between pages
 - 🚫 Error message validation
 - 📸 Screenshot capture on test failure
