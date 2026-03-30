@@ -1,0 +1,56 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation("org.testng:testng:7.11.0")
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation("org.seleniumhq.selenium:selenium-java:4.34.0")
+    // https://mvnrepository.com/artifact/com.github.javafaker/javafaker
+    implementation("com.github.javafaker:javafaker:1.0.2")
+    // https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
+    implementation("com.googlecode.json-simple:json-simple:1.1.1")
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-csv
+    implementation("org.apache.commons:commons-csv:1.14.1")
+    // https://mvnrepository.com/artifact/io.qameta.allure/allure-testng
+    implementation("io.qameta.allure:allure-testng:2.29.1")
+    // https://mvnrepository.com/artifact/io.rest-assured/rest-assured
+    testImplementation("io.rest-assured:rest-assured:5.5.6")
+    // https://mvnrepository.com/artifact/commons-configuration/commons-configuration
+    implementation("commons-configuration:commons-configuration:1.10")
+}
+
+test {
+    // suite path location declaring
+    useTestNG(){
+    // using project.hasProperty() for secure login with terminal/command line
+    // hasProperty will check if user set email and password data in -- System Properties
+        if(project.hasProperty("email") && project.hasProperty("password")){
+    // here inside -- email is the key and project.property("email") -- value (Non static it will given in CMD)
+            systemProperties.put("email", project.property("email"))
+    // here inside -- password is the key and project.property("password") -- value (Non static it will given in CMD)
+            systemProperties.put("password", project.property("password"))
+
+    // println used just to check then given email and password is taking or not it will show as output
+            println(project.property("email"))
+            println(project.property("password"))
+        }
+
+    // this will be use for suite run
+        // if we want to run regression suite -- gradle clean test -Psuite="regressionsuite.xml"
+        // if we want to run smoke suite -- gradle clean test -Psuite="smokesuite.xml"
+        if(project.hasProperty("suite")){
+            systemProperties.put("suite", project.property("suite"))
+            println(project.property("suite"))
+        }
+        suites "./src/test/resources/"+systemProperties.get("suite")
+    }
+}
