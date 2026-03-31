@@ -49,9 +49,13 @@ public class GmailService {
         return myEmail;
     }
 
-    public static void main(String[] args) throws IOException {
+    //main method created to check if it's working or not else it doesn't have any uses.
+    // expend ... --> three dot to see full code
+ /*   public static void main(String[] args) throws IOException {
         GmailService gmailService = new GmailService(); //object create
         String myEmail = gmailService.readLatestEmail();
         System.out.println(myEmail);
     }
+
+  */
 }

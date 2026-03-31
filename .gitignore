@@ -1,5 +1,6 @@
 .gradle
 .idea
+config.properties
 allure-report
 allure-results
 build/

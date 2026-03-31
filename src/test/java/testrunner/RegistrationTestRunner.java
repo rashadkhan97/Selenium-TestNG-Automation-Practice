@@ -93,6 +93,8 @@ public class RegistrationTestRunner extends Setup {
             Thread.sleep(5000);
             String myEmail = gmailService.readLatestEmail();
             System.out.println(myEmail);
+
+            Assert.assertTrue(myEmail.contains("Welcome to our platform"));
         }
         catch (Exception ex){
             System.out.println("Not saved "+ex);
